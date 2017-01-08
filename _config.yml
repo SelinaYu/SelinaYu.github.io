@@ -68,8 +68,12 @@ theme: next
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://github.com/SelinaYu/SelinaYu.github.io.git
+  branch: master
+
+- type: git
+  repo: root@selinayu.cc:/var/repo/blog.git
   branch: master
 
 plugins:
