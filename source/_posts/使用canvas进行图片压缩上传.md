@@ -101,5 +101,5 @@ function dataURLtoBlob(dataURL) {
 **应用图像Using images：**
 https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images
     
-[1]:https://github.com/SelinaYu/Code-of-Practice/blob/master/blog-code/compressImg.html
+[1]:https://codepen.io/selinayu/pen/oZLyjy
 
