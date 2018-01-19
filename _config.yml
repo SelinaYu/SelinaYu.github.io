@@ -107,6 +107,7 @@ index_generator:
   yearly: true  ##生成年视图
   monthly: true ##生成月视图
 
+  # yilia 主题
   # yilia 主题点击左侧所有文章展示所需配置
 jsonContent:
   meta: false
