@@ -6,7 +6,7 @@
 title: 清风雨竹
 subtitle: 
 description: 定其心，尽其能，善其人
-author: 李传玉
+author: 雨竹
 language: zh-Hans
 email: lichuanyu96@gmail.com
 timezone:
@@ -64,7 +64,7 @@ time_format: HH:mm:ss
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: yilia
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
@@ -76,9 +76,9 @@ deploy:
   repo: root@123.207.107.195:/var/repo/blog.git
   branch: master
 
-plugins:
-- hexo-generator-feed
-- hexo-generator-baidu-sitemap
+#plugins:
+#- hexo-generator-feed
+#- hexo-generator-baidu-sitemap
 
 #sitemap
 #baidusitemap:
@@ -106,3 +106,23 @@ index_generator:
   per_page: 8 ##归档页面默认6篇文章标题
   yearly: true  ##生成年视图
   monthly: true ##生成月视图
+
+  # yilia 主题点击左侧所有文章展示所需配置
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
