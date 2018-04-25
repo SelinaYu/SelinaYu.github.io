@@ -14,21 +14,21 @@ tags:
 
 先来了解这种组件复用的更新的流程：
 <!--more-->
-1.  `buildConstant` 方法，这是用来构造不同 `actionType` 的 ，`action` 和 `reducer`里都用到这个方法，他们通过传入一致的 `PREFIX`, `CONST` 返回一致的 `actionType`
+1.`buildConstant` 方法，这是用来构造不同 `actionType` 的 ，`action` 和 `reducer`里都用到这个方法，他们通过传入一致的 `PREFIX`, `CONST` 返回一致的 `actionType`
 
 ![image](http://7xnpna.com1.z0.glb.clouddn.com/buildconstant.jpg)
 
-2.  在 **action** 里,我们传入参数 **PREFIX** , 结合方法 **buildConstant** ,生成 **actionType** 返回整个 **Action**
+2.在 **action** 里,我们传入参数 **PREFIX** , 结合方法 **buildConstant** ,生成 **actionType** 返回整个 **Action**
 
 ![image](http://7xnpna.com1.z0.glb.clouddn.com/action.png)
 
 
-3.  在 **reducer** 里，同样传入参数 **PREFIX**，保持和在 **action** 里定义的一样，生成 **actionType**, 返回整个 **Reducer**
+3.在 **reducer** 里，同样传入参数 **PREFIX**，保持和在 **action** 里定义的一样，生成 **actionType**, 返回整个 **Reducer**
 
 
 ![image](http://7xnpna.com1.z0.glb.clouddn.com/reducer.png)
 
-4.  好了，上面方法写好了，当我们需要触发 **action**,更新数据时，只需要传入一个  **PREFIX** ，从而实例一个 **action** ,注意这个 **action** 是封装过的，就是第2步里返回的整个 **action(userAction)**，同样 **Reducer** 的使用也一样，需要传入和 **action** 的 一致的 **PREFIX**
+4.好了，上面方法写好了，当我们需要触发 **action**,更新数据时，只需要传入一个  **PREFIX** ，从而实例一个 **action** ,注意这个 **action** 是封装过的，就是第2步里返回的整个 **action(userAction)**，同样 **Reducer** 的使用也一样，需要传入和 **action** 的 一致的 **PREFIX**
 
 ![image](http://7xnpna.com1.z0.glb.clouddn.com/action%E8%B0%83%E7%94%A8.png)
 
