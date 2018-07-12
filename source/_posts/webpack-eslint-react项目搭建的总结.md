@@ -206,7 +206,7 @@ RewriteRule . /index.html [L]
 ```
 ## 写在最后
 
-说这么多，不如看下成品： [webpack-eslint-react](https://note.youdao.com/)
+说这么多，不如看下成品： [webpack-eslint-react](https://github.com/SelinaYu/webpack-eslint-react)
 
 ## 扩展阅读：
 
