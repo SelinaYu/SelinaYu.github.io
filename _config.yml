@@ -73,9 +73,9 @@ deploy:
   repo: git@github.com:SelinaYu/SelinaYu.github.io.git
   branch: master
 
-- type: git
-  repo: root@123.207.107.195:/var/repo/blog.git
-  branch: master
+#- type: git
+#  repo: root@123.207.107.195:/var/repo/blog.git
+#  branch: master
 
 #plugins:
 #- hexo-generator-feed
