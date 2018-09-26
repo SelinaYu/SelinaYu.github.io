@@ -12,7 +12,7 @@ categories: JavaScript
 如果直接使用ajax访问，会有以下错误
 *XMLHttpRequest cannot load http://www.weather.com.cn/data/cityinfo/101010100.html. No 'Access-Control-Allow-Origin' header is present on the requested resource.Origin 'http://127.0.0.1:8080' is therefore not allowed access.*
 <!--more-->
-![跨域的报错1]( http://7xq2ky.com1.z0.glb.clouddn.com/jsonperror.png)
+![跨域的报错1]( https://s1.ax1x.com/2018/09/20/im77WD.png)
 在JavaScript中，有一个很重要的安全性限制，被称为“Same-Origin Policy”（同源策略）。所谓同源(域)指当A域与B域具有相同的协议、域名、端口时称为同源(域)。同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。
 但是同源策略不阻止动态脚本插入，并且将脚本看作是从提供 Web 页面的域上加载的。这样我们可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求。这就是JSONP的内容。
 <h3>html代码</h3>
@@ -24,7 +24,7 @@ categories: JavaScript
     </script> 
     <script type="text/javascript" src="http://www.weather.com.cn/data/cityinfo/101010100.html?callback=jsonpCallback"></script>  
 ```
-注意返回的格式应该是`jsonpcallback({"data":"数据"})`，否则会如下报错![跨域的报错2](http://7xq2ky.com1.z0.glb.clouddn.com/jsonperror2.png)
+注意返回的格式应该是`jsonpcallback({"data":"数据"})`，否则会如下报错![跨域的报错2](https://s1.ax1x.com/2018/09/26/iMdYrQ.png)
   
  也许你会问为什么呢？因为用script标签加载完后，会立即把响应当js去执行，很明显`{"data":"数据"}`不是合法的js语句。同时，由于服务器不知道客户端的回调是什么，所以我们传递一个QueryString给服务端，让客户端告诉服务端，回调方法是什么。细心的你可能会发现上面的路径是多了一个`callback`当作参数的，`callback`正是这个QueryString。
 

@@ -15,7 +15,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
 
 base64编码表(如下图)
 
-![base64编码表](http://7xnpna.com1.z0.glb.clouddn.com/base64%E7%BC%96%E7%A0%81%E8%A1%A8.png)
+![base64编码表](https://s1.ax1x.com/2018/09/20/im76WF.png)
 
 转码步骤主要有以下几步
 

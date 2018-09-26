@@ -8,7 +8,7 @@ tags:
 
 这是一篇关于我常用的关于如何进行组件复用的方法总结。
 先来张图：
-![image](http://7xnpna.com1.z0.glb.clouddn.com/redux%E6%B5%81%E7%A8%8B.png)
+![image](https://s1.ax1x.com/2018/09/20/im7OOA.png)
 
 简单来说，redux更新数据的步骤如上面的流程(好吧，我只画了一部分)
 
@@ -16,26 +16,26 @@ tags:
 <!--more-->
 1.`buildConstant` 方法，这是用来构造不同 `actionType` 的 ，`action` 和 `reducer`里都用到这个方法，他们通过传入一致的 `PREFIX`, `CONST` 返回一致的 `actionType`
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/buildconstant.jpg)
+![image](https://s1.ax1x.com/2018/09/20/im7cz4.png)
 
 2.在 **action** 里,我们传入参数 **PREFIX** , 结合方法 **buildConstant** ,生成 **actionType** 返回整个 **Action**
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/action.png)
+![image](https://s1.ax1x.com/2018/09/20/im7Bd0.png)
 
 
 3.在 **reducer** 里，同样传入参数 **PREFIX**，保持和在 **action** 里定义的一样，生成 **actionType**, 返回整个 **Reducer**
 
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/reducer.png)
+![image](https://s1.ax1x.com/2018/09/20/im7qQH.png)
 
 4.好了，上面方法写好了，当我们需要触发 **action**,更新数据时，只需要传入一个  **PREFIX** ，从而实例一个 **action** ,注意这个 **action** 是封装过的，就是第2步里返回的整个 **action(userAction)**，同样 **Reducer** 的使用也一样，需要传入和 **action** 的 一致的 **PREFIX**
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/action%E8%B0%83%E7%94%A8.png)
+![image](https://s1.ax1x.com/2018/09/20/im72QJ.png)
 
 
 Reucer的调用
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/reducer%E8%B0%83%E7%94%A8.png)
+![image](https://s1.ax1x.com/2018/09/20/im7Lyd.png)
 
 现在可以看看最开始的 **redux** 更新的图，发现确实可以更新数据，那为什么要多此一举传入 **PREFIX** 更新数据，为什么不和平常一样好好写 **actionType** 呢，直接调用 **action**，为什么还要封装多一层呢？
 

@@ -7,7 +7,7 @@ tags:
 ---
 
 之前看过相关文章，看到一些3D的效果，往往觉得很惊艳，虽然自己也偶尔用到CSS3的动画，但更多的是使用2D的偏移，对3D更多的认知是停留在知道这个属性，并未进行实践。最近有空，刚好尝试了实现一个正多棱柱生成的动画，戳我看 [demo](http://selinayu.cc/Code-of-Practice/css3-multi-prism/index.html),效果图如下：
-![image](http://7xnpna.com1.z0.glb.clouddn.com/css3-multi-prism.png)
+![image](https://s1.ax1x.com/2018/09/20/im7xTP.png)
 
 
 <!--more-->
@@ -33,13 +33,13 @@ transform-style: flat|preserve-3d;
 
 这里不考虑上下两边。首先需要准备4个div,长宽分别是400px,层叠在一起，然后围绕Y轴(rotateY)，分别旋转90°，180°，270°，360°。效果如下图：
 
-![image](http://7xnpna.com1.z0.glb.clouddn.com/3D-01.jpg)
+![image](https://s1.ax1x.com/2018/09/20/im7DoV.png)
 
 然后在`translateZ(200px)`,就能制作成一个正方形。
 同理，多棱柱的情况也是如此。假设我们要制作 N 棱柱，那么我们每个div需要旋转的间距就是 `360°/N`,生成如下效果
-![image](http://7xnpna.com1.z0.glb.clouddn.com/3D-02.jpg)
+![image](https://s1.ax1x.com/2018/09/20/im7siT.png)
 然后我们重点是要计算`translateZ`的距离，我们观察正多边形，宽度同样是400px，六边形，如下图。观察图可知，`translateZ`的距离其实就是正N边型的圆心到边的距离。
-![image](http://7xnpna.com1.z0.glb.clouddn.com/3D-03.jpg)
+![image](https://s1.ax1x.com/2018/09/20/im7WLR.png)
 
 所以`translateZ`偏移的值可进行如下计算
 

@@ -20,25 +20,33 @@ css选择器优先级的如下：
 <h3>问题1</h3>
 我们都知道`!important`被应用在一个样式声明中，`!important`会覆盖CSS中任何其他的声明。那么我们应该怎样覆盖`!important`?有两种方法：
 
+```
     <div class="select1" id="select2">
     	<p>这是测试段落</p>
     </div>
-1. 将其应用到更高优先级的选择器(可通过添加或选择额外的选择器提高优先级)，如下：
+```
 
-    .select1 p{
-		color:red;!important;
-	}
-	#select2 p{
-		color: yellow;!important;
-	}
-2.  保持选择器一样，但添加的位置需要在原有声明的后面,在这里要注意**优先级相同的情况下，后边定义的会覆盖前边定义的。**
-      
-    .select1 p{
-		color:red;!important;
-	}
-	.select1 p{
-		color: yellow;
-	}
+1.将其应用到更高优先级的选择器(可通过添加或选择额外的选择器提高优先级)，如下：
+
+```
+.select1 p{
+	color:red;!important;
+}
+#select2 p{
+	color: yellow;!important;
+}
+```
+
+2.保持选择器一样，但添加的位置需要在原有声明的后面,在这里要注意**优先级相同的情况下，后边定义的会覆盖前边定义的。**
+
+```      
+.select1 p{
+	color:red;!important;
+}
+.select1 p{
+	color: yellow;
+}
+```
 <h3>问题2</h3>
 **我们知道类选择器的权重为10，标签的权重为1，如果我们有11个标签构成的选择器，那这个选择器能覆盖一个类选择器吗？**
   **实践证明，不能！不能！不能！**
