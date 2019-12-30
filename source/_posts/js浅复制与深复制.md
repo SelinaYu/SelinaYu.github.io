@@ -49,29 +49,29 @@ console.log(a1);    //{age: 20, name: "Bob"}
       
 js对象可以通过赋值来浅复制，而js对象深复制的方法有：
 
-**使用js提供的方法深拷贝一维数组:**
+**使用js提供的方法浅拷贝一维数组:**
 1.使用`slice`函数
 
 ```
-var a =[1,2,3,4];
+var a =[1,2,3,{c:4}];
 var b =[];
 
 b =a.slice(0);
-console.log(b);      //[1, 2, 3, 4]
-b [0] = 9;
-console.log(a);       //[1, 2, 3, 4]
-console.log(b);      //[9, 2, 3, 4]
+console.log(b);      //[1,2,3,{c:4}];
+b [3].c = 9;
+console.log(a);       //[1,2,3,{c:9}];
+console.log(b);      //[1,2,3,{c:9}];
 ```
 2.使用`concat`函数
 
 ```
-var a =[1,2,3,4];
+var a =[1,2,3,{c:4}];
 var b =[];
 
 //b =a.slice(0);
 b = a.concat([]);
 console.log(b);
-b [0] = 9;
+b [3].c = 9;
 console.log(a);
 console.log(b);
 
