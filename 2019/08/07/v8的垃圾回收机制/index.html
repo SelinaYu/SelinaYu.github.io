@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="雨竹">
 <meta property="og:description" content="前言在C、C++ 编程开发中，往往需要关注内存的分配和释放。然而，编写 JavaScript 的时候，我们却很少需要关注内存的分配和释放。那是因为JavaScript执行引擎V8具有自动垃圾收集机制，也就是说，执行环境会管理代码执行过程中的内存。我们常常听说的垃圾回收机制，有两种：标记清除法和计数引用法，这两种策略，主要都是告诉垃圾收集器回收那些不再有用的变量。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-07T08:08:22.663Z">
+<meta property="og:updated_time" content="2020-01-01T04:48:30.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v8的垃圾回收机制">
 <meta name="twitter:description" content="前言在C、C++ 编程开发中，往往需要关注内存的分配和释放。然而，编写 JavaScript 的时候，我们却很少需要关注内存的分配和释放。那是因为JavaScript执行引擎V8具有自动垃圾收集机制，也就是说，执行环境会管理代码执行过程中的内存。我们常常听说的垃圾回收机制，有两种：标记清除法和计数引用法，这两种策略，主要都是告诉垃圾收集器回收那些不再有用的变量。">
@@ -72,17 +72,11 @@
             
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/SelinaYu" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/li-chuan-yu-27" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto: cherryu96@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -120,8 +114,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/SelinaYu" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/li-chuan-yu-27" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto: cherryu96@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -308,8 +300,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/03/02/ES10-特性完全指南（译）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ES10-特性完全指南（译）</div>
+    <a href="/2019/05/03/前端需要知道的nginx配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端需要知道的nginx配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,23 +399,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
-      
-        
-      
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -468,31 +452,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Ajax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JSON</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">原型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">js 浅复制与深复制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,7 +476,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">水平垂直居中布局</a>
+                <a href="javascript:void(0)" class="js-tag color3">原型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">js 浅复制与深复制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,11 +496,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">eslint</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">水平垂直居中布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">跨域</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,18 +537,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">$.getJSON</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">eslint</a>
               </li>
             
             <div class="clearfix"></div>
@@ -596,12 +584,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
     
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;selinayu &lt;br&gt;喜欢接触新东西&lt;br&gt;目前是一枚前端&lt;br&gt;&lt;br&gt;正在前端的路上越走越远&lt;br&gt;</div>
-  	  	
-    	</section>
     
   </div>
   
